@@ -1,0 +1,78 @@
+@import "https://emerald-css.netlify.app/emerald.css";
+
+:root {
+  --primary-color: rgb(102, 51, 153);
+  --secondary-color: rgb(147, 197, 253);
+  --white: rgb(255, 255, 255);
+  --grey: rgb(175, 168, 168);
+  --light-grey: #ebebeb;
+  --black: rgb(0, 0, 0);
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  background-color: var(--primary-color);
+}
+
+.heading {
+  padding: 0.5rem;
+}
+
+.heading > ul {
+  padding-inline-start: 0;
+}
+
+.logo {
+  margin-left: 1.5rem;
+  padding: 0.5rem;
+  align-self: center;
+  line-height: 0;
+}
+
+.logo > img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.hamburger {
+  visibility: hidden;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  align-self: center;
+  line-height: 0;
+}
+
+.hamburger > svg {
+  color: var(--white);
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+/* 
+.nav {
+  display: flex;
+  text-align: center;
+}
+
+.nav-item {
+  display: block;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  margin: 0.5rem;
+  width: 100%;
+  
+}
+
+*/
+
+/* Override Library CSS */
+
+.nav-item > a {
+  color: var(--white) !important;
+  cursor: pointer;
+}
+
+/* .nav-item.active > a {
+  font-weight: bold;
+}  */

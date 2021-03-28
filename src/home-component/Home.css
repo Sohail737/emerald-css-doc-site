@@ -1,0 +1,40 @@
+@import "https://emerald-css.netlify.app/emerald.css";
+
+:root {
+  --primary-color: rgb(102, 51, 153);
+  --secondary-color: rgb(147, 197, 253);
+  --white: rgb(255, 255, 255);
+  --grey: rgb(175, 168, 168);
+  --light-grey: #ebebeb;
+  --black: rgb(0, 0, 0);
+}
+
+.home{
+  grid-area: home;
+  max-width: 600px;
+  margin:auto;
+  min-height:calc(100vh - 9rem);
+  /* padding:6.5rem 0 */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  align-content: center;
+}
+
+/* .home-content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  align-content: center;
+  height:calc(100vh - 200px);
+} */
+
+.home > h1,p,button{
+  /* padding:0.4rem; */
+  margin:0.5rem 0;
+
+}

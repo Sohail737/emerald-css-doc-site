@@ -1,0 +1,76 @@
+@import "https://emerald-css.netlify.app/emerald.css";
+
+:root {
+  --primary-color: rgb(102, 51, 153);
+  --secondary-color: rgb(147, 197, 253);
+  --white: rgb(255, 255, 255);
+  --grey: rgb(175, 168, 168);
+  --light-grey: #ebebeb;
+  --black: rgb(0, 0, 0);
+}
+
+.aside {
+  position:sticky;
+  top:0;
+  box-sizing:border-box;
+  grid-area: aside;
+  display: block;
+  padding: 1rem 2rem 1rem 1rem;
+  height:calc(100vh - 8rem);
+  overflow-y: auto;
+}
+
+.aside-nav{
+  
+}
+
+.aside-nav .stacked-list :hover a{
+  background-color: var(--primary-color);
+  border-radius:0.2rem;
+  color: var(--white);
+
+}
+.aside-nav .stacked-list :hover {
+  background-color: var(--primary-color);
+  border-radius:0.2rem;
+  color: var(--white);
+
+}
+
+
+
+.aside-nav > h4 {
+  padding: 0.2rem 0.5rem;
+  margin: 0.2rem 0.5rem;
+  text-align: left;
+}
+
+/* :root{
+  --primary-color: rgb(102, 51, 153);
+  --secondary-color: rgb(147, 197, 253);
+  --white: rgb(255, 255, 255);
+  --grey: rgb(175, 168, 168);
+  --light-grey:#ebebeb;
+  --black:rgb(0,0,0)
+}
+
+.stacked-list{
+  list-style:none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+    margin-block-end: 0;
+  height: auto;
+
+}
+
+.list-item {
+  display:flex;
+  padding:0.5rem;
+  align-items: center;
+}
+
+.list-item > a{
+  margin:0.5rem;
+  text-decoration: none;
+  color:var(--black);
+} */

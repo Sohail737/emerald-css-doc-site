@@ -1,0 +1,111 @@
+@import "https://emerald-css.netlify.app/emerald.css";
+
+:root {
+  --primary-color: rgb(102, 51, 153);
+  --secondary-color: rgb(147, 197, 253);
+  --white: rgb(255, 255, 255);
+  --grey: rgb(175, 168, 168);
+  --light-grey: #ebebeb;
+  --black: rgb(0, 0, 0);
+}
+
+.row {
+  grid-area: row;
+  /* display: flex; */
+  /* flex-flow: column nowrap; */
+  /* border-left: 1px solid rgb(233, 232, 232); */
+  /* align-items: flex-start; */
+  padding: 0.5rem;
+  max-width:50rem;
+  /* border-left:var(--light-grey) */
+}
+
+.row-pills {
+  padding: 0.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align:left;
+}
+
+.row-pills > p {
+  margin: 0.5rem 0;
+  /* padding: 0.3rem; */
+  text-align: left;
+}
+
+.row-pills > h3,
+h4 {
+  margin: 0.5rem 0;
+  /* padding: 0.3rem; */
+}
+
+.anchor{
+  height:0.7rem;
+}
+
+.component-container {
+  display:flex;
+  align-items: center;
+  flex-wrap:wrap;
+  box-sizing: border-box;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  position: relative;
+  /* min-width: 20rem; */
+  min-height: 30vh;
+}
+
+.component-container > button{
+  margin:0 0.5rem;
+}
+
+.badge-container {
+  position: relative;
+  height: 5rem;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  margin: 0.3rem;
+  box-sizing: border-box;
+}
+
+.badge-container-text {
+  text-transform: uppercase;
+  padding: 0 0.4rem;
+}
+
+/* Override CTA Position CSS */
+.component-container > .cta {
+  position:absolute;
+  left: 10rem;
+  bottom: 2rem;
+}
+
+.component-container > .cta.text {
+  left: 2rem;
+  bottom: 2rem;
+}
+
+/* Override badge Position CSS */
+
+.badge-container > .badge {
+  top: 0.6rem;
+  left: 0.6rem;
+}
+
+.badge-container > .badge.online ,.badge.offline{
+  top: 3.7rem;
+  right: 3rem;
+  left: revert;
+}
+
+.card-img > .badge {
+  top: 0.7rem;
+  right: 0.7rem;
+}
+
+.list-logo{
+  margin: 0.5rem;
+    line-height: 0;
+}
