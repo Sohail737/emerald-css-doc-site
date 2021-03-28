@@ -20,7 +20,6 @@ export default function App() {
         <Navigation route={route} setRoute={setRoute} />
         {route === routeNames.docs && <Aside route={route} />}
         {route === routeNames.docs && <Feed />}
-        {/* {true && <div className="overlay"></div>} */}
         {route === routeNames.home && <Home setRoute={setRoute} />}
         <Footer />
       </div>

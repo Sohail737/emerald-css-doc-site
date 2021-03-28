@@ -11,13 +11,8 @@
 
 .row {
   grid-area: row;
-  /* display: flex; */
-  /* flex-flow: column nowrap; */
-  /* border-left: 1px solid rgb(233, 232, 232); */
-  /* align-items: flex-start; */
   padding: 0.5rem;
   max-width:50rem;
-  /* border-left:var(--light-grey) */
 }
 
 .row-pills {
@@ -29,14 +24,12 @@
 
 .row-pills > p {
   margin: 0.5rem 0;
-  /* padding: 0.3rem; */
   text-align: left;
 }
 
 .row-pills > h3,
 h4 {
   margin: 0.5rem 0;
-  /* padding: 0.3rem; */
 }
 
 .anchor{
@@ -51,7 +44,6 @@ h4 {
   margin: 0.5rem 0;
   padding: 0.5rem 0;
   position: relative;
-  /* min-width: 20rem; */
   min-height: 30vh;
 }
 
