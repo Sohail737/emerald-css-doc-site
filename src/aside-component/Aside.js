@@ -8,7 +8,9 @@ const components = [
   { name: "Badge", anchor: "#badge" },
   { name: "Card", anchor: "#card" },
   { name: "Modal", anchor: "#modal" },
-  { name: "List", anchor: "#list" }
+  { name: "List", anchor: "#list" },
+  { name: "Avatar", anchor: "#avatar" },
+  { name: "Toast", anchor: "#toast" }
 ];
 
 export const Aside = () => {

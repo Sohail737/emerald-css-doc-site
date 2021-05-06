@@ -47,7 +47,7 @@ const badge = `<span class="badge">4</span>
 
 const badgeCSS = `
 .badge {
-  top: 0.6rem;
+  top: 0.9rem;
   left: 0.6rem;
 }
 .badge.online {
@@ -60,21 +60,24 @@ const badgeCSS = `
 }`;
 
 const cardSimple = `<div class="card">
-<div class="card-heading">
-  <h2>This is card heading</h2>
-  <span class="card-sub-heading">This sub heading</span>
-</div>
+<div class="card-detail">
+  <div class="card-heading">
+    <h2>This is card heading</h2>
+    <span class="card-sub-heading">This sub heading</span>
+  </div>
 
-<div class="card-content">
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-    harum dolor obcaecati repellat, aperiam ex enim suscipit vero
-    consequuntur autem modi officiis nesciunt repellendus adipisci
-    aspernatur molestiae tempora labore. Laudantium.
-  </p>
-</div>
-<div class="card-footer">
-  <button class="btn primary text">Go Somewhere</button>
+  <div class="card-content">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Itaque harum dolor obcaecati repellat, aperiam ex enim
+      suscipit vero consequuntur autem modi officiis nesciunt
+      repellendus adipisci aspernatur molestiae tempora labore.
+      Laudantium.
+    </p>
+  </div>
+  <div class="card-footer">
+    <button class="btn primary text">Go Somewhere</button>
+  </div>
 </div>
 </div>`;
 
@@ -86,19 +89,21 @@ const cardWithMedia = `<div class="card">
   />
   <span class="badge">4</span>
 </div>
-<div class="card-heading">
-  <h2>This is card with image and badge</h2>
-  <span class="card-sub-heading">This sub heading</span>
-</div>
-<div class="card-content">
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-    Repellat voluptatibus odit nobis recusandae repudiandae quos
-    excepturi voluptatum officiis est unde!
-  </p>
-</div>
-<div class="card-footer">
-  <button class="btn primary text">Go Somewhere</button>
+<div class="card-detail">
+  <div class="card-heading">
+    <h2>This is card with image and badge</h2>
+    <span class="card-sub-heading">This sub heading</span>
+  </div>
+  <div class="card-content">
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      Repellat voluptatibus odit nobis recusandae repudiandae quos
+      excepturi voluptatum officiis est unde!
+    </p>
+  </div>
+  <div class="card-footer">
+    <button class="btn primary text">Go Somewhere</button>
+  </div>
 </div>
 </div>`;
 
@@ -117,39 +122,157 @@ const modalSimple = `<div class="modal">
     sint ex debitis?
   </p>
 </div>
-<div class="modal-buttons">
+<div class="modal-footer">
   <button class="btn primary text">Agree</button>
   <button class="btn primary text">Disagree</button>
 </div>
 </div>`;
 
-const stackedList=`<ul class="stacked-list">
+const modalWithInput = `<div class="modal">
+<h2 class="modal-heading">This is Modal Heading</h2>
+<div class="modal-content">
+  <input type="text" placeholder="Modal Input" class="input" />
+</div>
+<div class="modal-footer">
+  <button class="btn primary text">Submit</button>
+  <button class="btn primary text">Cancel</button>
+</div>
+</div>`;
+
+const stackedList = `<ul class="stacked-list">
 <li class="list-item">
-  <div class="list-logo">
-  </div>
-  <a href="">Notification Preferences</a>
+  <a class="list-item-pills" href="">
+    <div class="list-item-left">
+      <svg width="1em" height="1em" viewBox="0 0 24 24">
+        <path
+          d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 0 1 2-2a2 2 0 0 1 2 2v.29c2.97.88 5 3.61 5 6.71v6l2 2m-7 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </div>
+    Notification Preferences
+  </a>
 </li>
 <li class="list-item">
-  <div class="list-logo">
-  </div>
-  <a href="">Send Mail</a>
+  <a class="list-item-pills" href="">
+    <div class="list-item-left">
+      <svg width="1em" height="1em" viewBox="0 0 24 24">
+        <path
+          d="M4 8l8 5l8-5l-8-5l-8 5m18 0v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-.73.39-1.36.97-1.71L12 .64l9.03 5.65c.58.35.97.98.97 1.71z"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </div>
+    Send Mail
+  </a>
 </li>
 <li class="list-item">
-  <div class="list-logo">
-  </div>
-  <a href="">Profile</a>
+  <a class="list-item-pills" href="">
+    <div class="list-item-left">
+      <svg width="1em" height="1em" viewBox="0 0 24 24">
+        <path
+          d="M17.25 13a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0M22 12c0 5.5-4.5 10-10 10H2V12C2 6.5 6.5 2 12 2s10 4.5 10 10M7 18c1.41 1.23 3 2 5 2c4.41 0 8-3.59 8-8c0-.79-.12-1.55-.33-2.26c-.72.17-1.47.26-2.25.26c-2 0-3.85-.6-5.42-1.61c0 0-1.46 5.37-3.97 4.61c-.66-.2-1.03.31-1.03 1"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </div>
+    Profile
+  </a>
 </li>
 <li class="list-item">
-  <div class="list-logo">
-  </div>
-  <a href="">Manage Address</a>
+  <a class="list-item-pills" href="">
+    <div class="list-item-left">
+      <svg width="1em" height="1em" viewBox="0 0 24 24">
+        <path
+          d="M8 9a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m4 8H4v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1m8-9h-6v2h6V8m0 4h-6v2h6v-2m0 4h-6v2h6v-2m2-12h-8v2h8v14H2V6h8V4H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m-9 2h-2V2h2v4z"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </div>
+    Manage Address
+  </a>
 </li>
 <li class="list-item">
-  <div class="list-logo">
-  </div>
-  <a href="">Logout</a>
+  <a class="list-item-pills" href="">
+    <div class="list-item-left">
+      <svg width="1em" height="1em" viewBox="0 0 24 24">
+        <path
+          d="M16.56 5.44l-1.45 1.45A5.969 5.969 0 0 1 18 12a6 6 0 0 1-6 6a6 6 0 0 1-6-6c0-2.17 1.16-4.06 2.88-5.12L7.44 5.44A7.961 7.961 0 0 0 4 12a8 8 0 0 0 8 8a8 8 0 0 0 8-8c0-2.72-1.36-5.12-3.44-6.56M13 3h-2v10h2"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </div>
+    Logout
+  </a>
 </li>
-</ul>`
+</ul>`;
+const avatar = `<img
+class="avatar small"
+src="https://semantic-ui.com/images/avatar/large/steve.jpg"
+alt=""
+/>
+<img
+class="avatar medium"
+src="https://semantic-ui.com/images/avatar/large/steve.jpg"
+alt=""
+/>
+
+<img
+class="avatar large"
+src="https://semantic-ui.com/images/avatar/large/steve.jpg"
+alt=""
+/>`;
+
+const toast=`<div class="toast success">
+<p class="toast-text">This is success toast</p>
+
+<svg
+  class="toast-button"
+  width="1em"
+  height="1em"
+  viewBox="0 0 42 42"
+>
+  <path
+    fillRule="evenodd"
+    d="M21.002 26.588l10.357 10.604c1.039 1.072 1.715 1.083 2.773 0l2.078-2.128c1.018-1.042 1.087-1.726 0-2.839L25.245 21L36.211 9.775c1.027-1.055 1.047-1.767 0-2.84l-2.078-2.127c-1.078-1.104-1.744-1.053-2.773 0L21.002 15.412L10.645 4.809c-1.029-1.053-1.695-1.104-2.773 0L5.794 6.936c-1.048 1.073-1.029 1.785 0 2.84L16.759 21L5.794 32.225c-1.087 1.113-1.029 1.797 0 2.839l2.077 2.128c1.049 1.083 1.725 1.072 2.773 0l10.358-10.604z"
+    fill="currentColor"
+  ></path>
+</svg>
+</div>
+
+<div class="toast warning">
+<p class="toast-text">This is warning toast</p>
+
+<svg
+  class="toast-button"
+  width="1em"
+  height="1em"
+  viewBox="0 0 42 42"
+>
+  <path
+    fillRule="evenodd"
+    d="M21.002 26.588l10.357 10.604c1.039 1.072 1.715 1.083 2.773 0l2.078-2.128c1.018-1.042 1.087-1.726 0-2.839L25.245 21L36.211 9.775c1.027-1.055 1.047-1.767 0-2.84l-2.078-2.127c-1.078-1.104-1.744-1.053-2.773 0L21.002 15.412L10.645 4.809c-1.029-1.053-1.695-1.104-2.773 0L5.794 6.936c-1.048 1.073-1.029 1.785 0 2.84L16.759 21L5.794 32.225c-1.087 1.113-1.029 1.797 0 2.839l2.077 2.128c1.049 1.083 1.725 1.072 2.773 0l10.358-10.604z"
+    fill="currentColor"
+  ></path>
+</svg>
+</div>
+
+<div class="toast error">
+<p class="toast-text">This is error toast</p>
+
+<svg
+  class="toast-button"
+  width="1em"
+  height="1em"
+  viewBox="0 0 42 42"
+>
+  <path
+    fillRule="evenodd"
+    d="M21.002 26.588l10.357 10.604c1.039 1.072 1.715 1.083 2.773 0l2.078-2.128c1.018-1.042 1.087-1.726 0-2.839L25.245 21L36.211 9.775c1.027-1.055 1.047-1.767 0-2.84l-2.078-2.127c-1.078-1.104-1.744-1.053-2.773 0L21.002 15.412L10.645 4.809c-1.029-1.053-1.695-1.104-2.773 0L5.794 6.936c-1.048 1.073-1.029 1.785 0 2.84L16.759 21L5.794 32.225c-1.087 1.113-1.029 1.797 0 2.839l2.077 2.128c1.049 1.083 1.725 1.072 2.773 0l10.358-10.604z"
+    fill="currentColor"
+  ></path>
+</svg>
+</div>`
 
 const emeraldImport = `@import "https://emerald-css.netlify.app/emerald.css";`;
 
@@ -235,8 +358,8 @@ export const Feed = () => {
         </div>
         <CodeHighlight code={buttonSize} />
       </div>
-      <div class="row-pills">
-        <span class="anchor" id="input"></span>
+      <div className="row-pills">
+        <span className="anchor" id="input"></span>
         <h3>Input</h3>
         <p>Input are intergal to taking data from user.</p>
         <h4>Input without label</h4>
@@ -246,15 +369,15 @@ export const Feed = () => {
         <CodeHighlight code={input} />
         <h4>Input with label</h4>
         <div className="component-container">
-          <div class="input-group">
-            <span class="group-label">Name</span>
-            <input class="input-group input" placeholder="Type Here" />
+          <div className="input-group">
+            <span className="group-label">Name</span>
+            <input className="input-group input" placeholder="Type Here" />
           </div>
         </div>
         <CodeHighlight code={inputWithLabel} />
       </div>
-      <div class="row-pills">
-        <span class="anchor" id="badge"></span>
+      <div className="row-pills">
+        <span className="anchor" id="badge"></span>
         <h3>Badge</h3>
         <p>
           Badges are the count you get over icons and buttons that specify if
@@ -270,28 +393,28 @@ export const Feed = () => {
             <span className="badge-container-text">cart</span>
             <span className="badge">4</span>
           </a>
-          <div class="badge-container">
+          <div className="badge-container">
             <img
-              class="avatar medium"
+              className="avatar medium"
               src="https://semantic-ui.com/images/avatar/large/steve.jpg"
               alt=""
             />
-            <span class="badge online"></span>
+            <span className="badge online"></span>
           </div>
-          <div class="badge-container">
+          <div className="badge-container">
             <img
-              class="avatar medium"
+              className="avatar medium"
               src="https://semantic-ui.com/images/avatar/large/steve.jpg"
               alt=""
             />
-            <span class="badge offline"></span>
+            <span className="badge offline"></span>
           </div>
         </div>
         <CodeHighlight code={badge} />
         <CodeHighlight code={badgeCSS} />
       </div>
       <div className="row-pills">
-        <span class="anchor" id="card"></span>
+        <span className="anchor" id="card"></span>
         <h3>Card</h3>
         <p>
           Cards display data for a single entity, sometimes, it acts as entry
@@ -301,21 +424,24 @@ export const Feed = () => {
         <p>Simple cards does not contain any image, and only texts</p>
         <div className="component-container">
           <div className="card">
-            <div className="card-heading">
-              <h2>This is card heading</h2>
-              <span className="card-sub-heading">This sub heading</span>
-            </div>
+            <div className="card-detail">
+              <div className="card-heading">
+                <h2>This is card heading</h2>
+                <span className="card-sub-heading">This sub heading</span>
+              </div>
 
-            <div className="card-content">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-                harum dolor obcaecati repellat, aperiam ex enim suscipit vero
-                consequuntur autem modi officiis nesciunt repellendus adipisci
-                aspernatur molestiae tempora labore. Laudantium.
-              </p>
-            </div>
-            <div className="card-footer">
-              <button className="btn primary text">Go Somewhere</button>
+              <div className="card-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Itaque harum dolor obcaecati repellat, aperiam ex enim
+                  suscipit vero consequuntur autem modi officiis nesciunt
+                  repellendus adipisci aspernatur molestiae tempora labore.
+                  Laudantium.
+                </p>
+              </div>
+              <div className="card-footer">
+                <button className="btn primary text">Go Somewhere</button>
+              </div>
             </div>
           </div>
         </div>
@@ -335,19 +461,21 @@ export const Feed = () => {
               />
               <span className="badge">4</span>
             </div>
-            <div className="card-heading">
-              <h2>This is card with image and badge</h2>
-              <span className="card-sub-heading">This sub heading</span>
-            </div>
-            <div className="card-content">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Repellat voluptatibus odit nobis recusandae repudiandae quos
-                excepturi voluptatum officiis est unde!
-              </p>
-            </div>
-            <div className="card-footer">
-              <button className="btn primary text">Go Somewhere</button>
+            <div className="card-detail">
+              <div className="card-heading">
+                <h2>This is card with image and badge</h2>
+                <span className="card-sub-heading">This sub heading</span>
+              </div>
+              <div className="card-content">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Repellat voluptatibus odit nobis recusandae repudiandae quos
+                  excepturi voluptatum officiis est unde!
+                </p>
+              </div>
+              <div className="card-footer">
+                <button className="btn primary text">Go Somewhere</button>
+              </div>
             </div>
           </div>
         </div>
@@ -355,7 +483,7 @@ export const Feed = () => {
         <CodeHighlight code={badgeForCardWithMedia} />
       </div>
       <div className="row-pills">
-        <span class="anchor" id="modal"></span>
+        <span className="anchor" id="modal"></span>
         <h3>Modal</h3>
         <p>
           A Modal is a type of window that opens in front of everything on page
@@ -373,82 +501,196 @@ export const Feed = () => {
                 sint ex debitis?
               </p>
             </div>
-            <div className="modal-buttons">
+            <div className="modal-footer">
               <button className="btn primary text">Agree</button>
               <button className="btn primary text">Disagree</button>
             </div>
           </div>
         </div>
         <CodeHighlight code={modalSimple} />
+        <h4>Modal With Input</h4>
+        <p>Modal with input takes important information from user</p>
+        <div className="component-container">
+          <div class="modal">
+            <h2 class="modal-heading">This is Modal Heading</h2>
+            <div class="modal-content">
+              <input type="text" placeholder="Modal Input" class="input" />
+            </div>
+            <div className="modal-footer">
+              <button className="btn primary text">Submit</button>
+              <button className="btn primary text">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <CodeHighlight code={modalWithInput} />
       </div>
       <div className="row-pills">
-      <span class="anchor" id="list"></span>
+        <span class="anchor" id="list"></span>
         <h3>List</h3>
         <p>
           List are used for displaying a content in list for example a
           notification list, or side bar navigation list.
         </p>
         <div className="component-container">
-          <ul class="stacked-list">
-            <li class="list-item">
-              <div class="list-logo">
-                <svg width="1em" height="1em" viewBox="0 0 24 24">
-                  <path
-                    d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 0 1 2-2a2 2 0 0 1 2 2v.29c2.97.88 5 3.61 5 6.71v6l2 2m-7 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </div>
-              <a href="">Notification Preferences</a>
+          <ul className="stacked-list">
+            <li className="list-item">
+              <a className="list-item-pills" href="">
+                <div className="list-item-left">
+                  <svg width="1em" height="1em" viewBox="0 0 24 24">
+                    <path
+                      d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 0 1 2-2a2 2 0 0 1 2 2v.29c2.97.88 5 3.61 5 6.71v6l2 2m-7 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                Notification Preferences
+              </a>
             </li>
-            <li class="list-item">
-              <div class="list-logo">
-                <svg width="1em" height="1em" viewBox="0 0 24 24">
-                  <path
-                    d="M4 8l8 5l8-5l-8-5l-8 5m18 0v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-.73.39-1.36.97-1.71L12 .64l9.03 5.65c.58.35.97.98.97 1.71z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </div>
-
-              <a href="">Send Mail</a>
+            <li className="list-item">
+              <a className="list-item-pills" href="">
+                <div className="list-item-left">
+                  <svg width="1em" height="1em" viewBox="0 0 24 24">
+                    <path
+                      d="M4 8l8 5l8-5l-8-5l-8 5m18 0v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-.73.39-1.36.97-1.71L12 .64l9.03 5.65c.58.35.97.98.97 1.71z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                Send Mail
+              </a>
             </li>
-            <li class="list-item">
-              <div class="list-logo">
-                <svg width="1em" height="1em" viewBox="0 0 24 24">
-                  <path
-                    d="M17.25 13a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0M22 12c0 5.5-4.5 10-10 10H2V12C2 6.5 6.5 2 12 2s10 4.5 10 10M7 18c1.41 1.23 3 2 5 2c4.41 0 8-3.59 8-8c0-.79-.12-1.55-.33-2.26c-.72.17-1.47.26-2.25.26c-2 0-3.85-.6-5.42-1.61c0 0-1.46 5.37-3.97 4.61c-.66-.2-1.03.31-1.03 1"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </div>
-              <a href="">Profile</a>
+            <li className="list-item">
+              <a className="list-item-pills" href="">
+                <div className="list-item-left">
+                  <svg width="1em" height="1em" viewBox="0 0 24 24">
+                    <path
+                      d="M17.25 13a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0M22 12c0 5.5-4.5 10-10 10H2V12C2 6.5 6.5 2 12 2s10 4.5 10 10M7 18c1.41 1.23 3 2 5 2c4.41 0 8-3.59 8-8c0-.79-.12-1.55-.33-2.26c-.72.17-1.47.26-2.25.26c-2 0-3.85-.6-5.42-1.61c0 0-1.46 5.37-3.97 4.61c-.66-.2-1.03.31-1.03 1"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                Profile
+              </a>
             </li>
-            <li class="list-item">
-              <div class="list-logo">
-                <svg width="1em" height="1em" viewBox="0 0 24 24">
-                  <path
-                    d="M8 9a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m4 8H4v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1m8-9h-6v2h6V8m0 4h-6v2h6v-2m0 4h-6v2h6v-2m2-12h-8v2h8v14H2V6h8V4H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m-9 2h-2V2h2v4z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </div>
-              <a href="">Manage Address</a>
+            <li className="list-item">
+              <a className="list-item-pills" href="">
+                <div className="list-item-left">
+                  <svg width="1em" height="1em" viewBox="0 0 24 24">
+                    <path
+                      d="M8 9a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m4 8H4v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1m8-9h-6v2h6V8m0 4h-6v2h6v-2m0 4h-6v2h6v-2m2-12h-8v2h8v14H2V6h8V4H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m-9 2h-2V2h2v4z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                Manage Address
+              </a>
             </li>
-            <li class="list-item">
-              <div class="list-logo">
-                <svg width="1em" height="1em" viewBox="0 0 24 24">
-                  <path
-                    d="M16.56 5.44l-1.45 1.45A5.969 5.969 0 0 1 18 12a6 6 0 0 1-6 6a6 6 0 0 1-6-6c0-2.17 1.16-4.06 2.88-5.12L7.44 5.44A7.961 7.961 0 0 0 4 12a8 8 0 0 0 8 8a8 8 0 0 0 8-8c0-2.72-1.36-5.12-3.44-6.56M13 3h-2v10h2"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </div>
-              <a href="">Logout</a>
+            <li className="list-item">
+              <a className="list-item-pills" href="">
+                <div className="list-item-left">
+                  <svg width="1em" height="1em" viewBox="0 0 24 24">
+                    <path
+                      d="M16.56 5.44l-1.45 1.45A5.969 5.969 0 0 1 18 12a6 6 0 0 1-6 6a6 6 0 0 1-6-6c0-2.17 1.16-4.06 2.88-5.12L7.44 5.44A7.961 7.961 0 0 0 4 12a8 8 0 0 0 8 8a8 8 0 0 0 8-8c0-2.72-1.36-5.12-3.44-6.56M13 3h-2v10h2"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                Logout
+              </a>
             </li>
           </ul>
         </div>
-        <CodeHighlight code={stackedList}/>
+        <CodeHighlight code={stackedList} />
+      </div>
+      <div className="row-pills">
+        <span className="anchor" id="avatar"></span>
+        <h3>Avatar</h3>
+        <p>
+          Avatar is used to display profile pic in chats or in social media
+          profile to identify the user.
+        </p>
+        <div className="component-container">
+          <img
+            className="avatar small margin-lr"
+            src="https://semantic-ui.com/images/avatar/large/steve.jpg"
+            alt=""
+          />
+          <img
+            className="avatar medium margin-lr"
+            src="https://semantic-ui.com/images/avatar/large/steve.jpg"
+            alt=""
+          />
+
+          <img
+            className="avatar large margin-lr"
+            src="https://semantic-ui.com/images/avatar/large/steve.jpg"
+            alt=""
+          />
+        </div>
+        <CodeHighlight code={avatar} />
+      </div>
+      <div className="row-pills">
+        <span className="anchor" id="toast"></span>
+        <h3>Toast</h3>
+        <p>
+          Toasts are popup used to convey message to user wether the action they
+          performed is successful or not.
+        </p>
+        <div className="component-container">
+          <div className="toast-container">
+            <div className="toast success">
+              <p className="toast-text">This is success toast</p>
+
+              <svg
+                className="toast-button"
+                width="1em"
+                height="1em"
+                viewBox="0 0 42 42"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M21.002 26.588l10.357 10.604c1.039 1.072 1.715 1.083 2.773 0l2.078-2.128c1.018-1.042 1.087-1.726 0-2.839L25.245 21L36.211 9.775c1.027-1.055 1.047-1.767 0-2.84l-2.078-2.127c-1.078-1.104-1.744-1.053-2.773 0L21.002 15.412L10.645 4.809c-1.029-1.053-1.695-1.104-2.773 0L5.794 6.936c-1.048 1.073-1.029 1.785 0 2.84L16.759 21L5.794 32.225c-1.087 1.113-1.029 1.797 0 2.839l2.077 2.128c1.049 1.083 1.725 1.072 2.773 0l10.358-10.604z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+
+            <div className="toast warning">
+              <p className="toast-text">This is warning toast</p>
+
+              <svg
+                className="toast-button"
+                width="1em"
+                height="1em"
+                viewBox="0 0 42 42"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M21.002 26.588l10.357 10.604c1.039 1.072 1.715 1.083 2.773 0l2.078-2.128c1.018-1.042 1.087-1.726 0-2.839L25.245 21L36.211 9.775c1.027-1.055 1.047-1.767 0-2.84l-2.078-2.127c-1.078-1.104-1.744-1.053-2.773 0L21.002 15.412L10.645 4.809c-1.029-1.053-1.695-1.104-2.773 0L5.794 6.936c-1.048 1.073-1.029 1.785 0 2.84L16.759 21L5.794 32.225c-1.087 1.113-1.029 1.797 0 2.839l2.077 2.128c1.049 1.083 1.725 1.072 2.773 0l10.358-10.604z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+
+            <div className="toast error">
+              <p className="toast-text">This is error toast</p>
+
+              <svg
+                className="toast-button"
+                width="1em"
+                height="1em"
+                viewBox="0 0 42 42"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M21.002 26.588l10.357 10.604c1.039 1.072 1.715 1.083 2.773 0l2.078-2.128c1.018-1.042 1.087-1.726 0-2.839L25.245 21L36.211 9.775c1.027-1.055 1.047-1.767 0-2.84l-2.078-2.127c-1.078-1.104-1.744-1.053-2.773 0L21.002 15.412L10.645 4.809c-1.029-1.053-1.695-1.104-2.773 0L5.794 6.936c-1.048 1.073-1.029 1.785 0 2.84L16.759 21L5.794 32.225c-1.087 1.113-1.029 1.797 0 2.839l2.077 2.128c1.049 1.083 1.725 1.072 2.773 0l10.358-10.604z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <CodeHighlight code={toast} />
       </div>
     </div>
   );
