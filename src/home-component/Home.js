@@ -14,9 +14,6 @@ export const Home = ({setRoute}) => {
           user experience. Use classes and start building your UI
         </p>
         <button onClick={()=>setRoute(routeNames.docs)} class="btn primary">Get Started</button>
-      {/* <div className="home-content">
-        
-      </div> */}
     </div>
   );
 };
